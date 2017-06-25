@@ -1,14 +1,14 @@
-Package: tic.package
+Package: tic.drat
 Title: Example Package for 'tic'
 Version: 0.0-0
 Authors@R: person("Kirill", "Müller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org")
-Description: Building a package with pkgdown documentation.
+Description: Building a package and uploading it to a drat repository.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Date: 2017-06-17
-BugReports: https://github.com/krlmlr/tic.package/issues
-URL: https://github.com/krlmlr/tic.package, http://krlmlr.github.io/tic.package
+BugReports: https://github.com/krlmlr/tic.drat/issues
+URL: https://github.com/krlmlr/tic.drat, http://krlmlr.github.io/tic.drat
 Roxygen: list(markdown = TRUE)
 Suggests: testthat
 RoxygenNote: 6.0.1
