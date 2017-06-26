@@ -22,9 +22,10 @@ if (Sys.getenv("id_rsa") != "" && ci()$get_branch() == "master") {
     add_step(step_test_ssh())
 
   get_stage("deploy") %>%
-    add_step(step_run_code(options(error = expression({traceback(1); q(status = 1)})))) %>%
-    add_step(step_push_deploy(
+    add_step(step_setup_push_deploy(
       path = "~/git/drat",
-      remote = paste0(strsplit(ci()$get_slug(), "/")[[1]][[1]], "/drat")
-    ))
+      remote = paste0("git@github.com:", gsub("/.*$", "/drat", ci()$get_slug()), ".git")
+    )) %>%
+    add_step(step_add_to_drat()) %>%
+    add_step(step_do_push_deploy(path = "~/git/drat"))
 }
