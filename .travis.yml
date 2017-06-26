@@ -35,9 +35,14 @@ env:
   - _R_CHECK_FORCE_SUGGESTS_=false
   - MAKEFLAGS="-j 2"
 
-os:
-- linux
-- osx
+matrix:
+- os: linux
+- os: osx
+  osx_image: xcode6.4
+- os: osx
+  osx_image: xcode7.3
+- os: osx
+  osx_image: xcode8.3
 
 #services
 services:
