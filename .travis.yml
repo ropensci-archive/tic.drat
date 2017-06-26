@@ -35,5 +35,9 @@ env:
   - _R_CHECK_FORCE_SUGGESTS_=false
   - MAKEFLAGS="-j 2"
 
+os:
+- linux
+- osx
+
 #services
 services:
