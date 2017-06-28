@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // divide
 double divide(double x, double y);
-RcppExport SEXP tic_drat_divide(SEXP xSEXP, SEXP ySEXP) {
+RcppExport SEXP ticdrat_divide(SEXP xSEXP, SEXP ySEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -16,4 +16,14 @@ BEGIN_RCPP
     rcpp_result_gen = Rcpp::wrap(divide(x, y));
     return rcpp_result_gen;
 END_RCPP
+}
+
+static const R_CallMethodDef CallEntries[] = {
+    {"ticdrat_divide", (DL_FUNC) &ticdrat_divide, 2},
+    {NULL, NULL, 0}
+};
+
+RcppExport void R_init_ticdrat(DllInfo *dll) {
+    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
+    R_useDynamicSymbols(dll, FALSE);
 }

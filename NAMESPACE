@@ -3,4 +3,4 @@
 export(divide)
 export(multiply)
 importFrom(Rcpp,sourceCpp)
-useDynLib(tic.drat)
+useDynLib(ticdrat)
