@@ -1,8 +1,8 @@
 #' Multiplies two numbers
 #'
-#' Performs multiplication of two integer or numeric scalars.
+#' Performs multiplication and division of two integer or numeric scalars.
 #'
-#' @param x,y Scalar values to multiply
+#' @param x,y Scalar values to multiply or divide
 #'
 #' @seealso [prod()]
 #'
