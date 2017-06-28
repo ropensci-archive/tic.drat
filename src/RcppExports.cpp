@@ -17,16 +17,3 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-
-RcppExport SEXP tic_drat_divide(SEXP, SEXP);
-
-static const R_CallMethodDef CallEntries[] = {
-    {"tic.drat_divide", (DL_FUNC) &tic.drat_divide, 2},
-    {"tic_drat_divide", (DL_FUNC) &tic_drat_divide, 2},
-    {NULL, NULL, 0}
-};
-
-RcppExport void R_init_tic.drat(DllInfo *dll) {
-    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
-    R_useDynamicSymbols(dll, FALSE);
-}
