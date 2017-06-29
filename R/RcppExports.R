@@ -4,6 +4,6 @@
 #' @rdname multiply
 #' @export
 divide <- function(x, y) {
-    .Call('ticdrat_divide', PACKAGE = 'ticdrat', x, y)
+    .Call('tic_drat_divide', PACKAGE = 'tic.drat', x, y)
 }
 

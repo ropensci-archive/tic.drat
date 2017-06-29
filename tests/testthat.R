@@ -1,4 +1,4 @@
 library(testthat)
-library(ticdrat)
+library(tic.drat)
 
-test_check("ticdrat")
+test_check("tic.drat")
