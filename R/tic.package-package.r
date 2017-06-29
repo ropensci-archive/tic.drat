@@ -5,6 +5,6 @@
 #' Sys.time()
 "_PACKAGE"
 
-#' @useDynLib tic.drat
+#' @useDynLib ticdrat
 #' @importFrom Rcpp sourceCpp
 NULL
