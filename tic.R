@@ -13,7 +13,7 @@ if (Sys.getenv("id_rsa") != "" && ci()$get_branch() == "master") {
     add_step(step_setup_push_deploy(
       path = "~/git/drat",
       branch = "master",
-      remote = paste0("git@github.com:", gsub("/.*$", "/drat", ci()$get_slug()), ".git")
+      remote = paste0("git@github.com:", gsub("/.*$", "/tic.drat.repo", ci()$get_slug()), ".git")
     )) %>%
     add_step(step_add_to_drat()) %>%
     add_step(step_do_push_deploy(path = "~/git/drat"))
