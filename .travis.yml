@@ -36,10 +36,9 @@ env:
 matrix:
   include:
   - os: linux
-    dist: trusty
+    dist: xenial
     sudo: false
   - os: osx
-    osx_image: xcode7.3
 
 #services
 services:
