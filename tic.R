@@ -1,4 +1,4 @@
-add_package_checks()
+do_package_checks()
 
 if (Sys.getenv("id_rsa") != "" && ci()$get_branch() == "master") {
   # pkgdown documentation can be built optionally. Other example criteria:
