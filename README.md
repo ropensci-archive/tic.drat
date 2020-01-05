@@ -1,7 +1,7 @@
 # tic.drat
 
-[![Travis-CI Build Status](https://travis-ci.org/ropenscilabs/tic.drat.svg?branch=master)](https://travis-ci.org/ropenscilabs/tic.drat)
-[![Build status](https://ci.appveyor.com/api/projects/status/cgrp3951he3m6a84/branch/master?svg=true)](https://ci.appveyor.com/project/ropensci/tic-drat/branch/master)
+[![Travis build status](https://img.shields.io/travis/ropenscilabs/tic.drat/master?logo=travis&style=flat-square&label=Linux)](https://travis-ci.com/ropenscilabs/tic.drat)
+[![AppVeyor build status](https://img.shields.io/appveyor/ci/ropensci/tic-drat?label=Windows&logo=appveyor&style=flat-square)](https://ci.appveyor.com/project/ropensci/tic-drat)
 [![Coverage Status](https://codecov.io/gh/ropenscilabs/tic.drat/branch/master/graph/badge.svg)](https://codecov.io/github/ropenscilabs/tic.drat?branch=master)
 
 A minimal example for a [_drat_ repository](https://github.com/ropenscilabs/tic.drat.repo) created and uploaded by _tic_, hosting source and binary macOS packages.
