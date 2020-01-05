@@ -4,7 +4,7 @@
 language: r
 cache:
   - packages
-  - ccache
+  - $HOME/.ccache
 latex: false
 
 env:
