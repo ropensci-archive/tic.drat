@@ -7,7 +7,7 @@ if (Sys.getenv("id_rsa") != "" && ci()$get_branch() == "master") {
   # - `Sys.getenv("BUILD_PKGDOWN") != ""`: If the env var "BUILD_PKGDOWN" is set
   # - `Sys.getenv("TRAVIS_EVENT_TYPE") == "cron"`: Only for Travis cron jobs
   get_stage("before_deploy") %>%
-    add_step(step_setup_ssh())
+    add_step(step_setup_ssh('id_rsa'))
 
   get_stage("deploy") %>%
     add_step(step_setup_push_deploy(
