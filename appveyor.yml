@@ -13,7 +13,7 @@ install:
   - cmd: Rscript -e "getOption('repos')"
   - cmd: Rscript -e "if (!requireNamespace('remotes')) install.packages('remotes', type = 'binary')"
   - cmd: Rscript -e "if (getRversion() < '3.2' && !requireNamespace('curl')) install.packages('curl', type = 'binary')"
-  - cmd: Rscript -e "options(pkgType = 'binary'); remotes::install_github('ropenscilabs/tic'); print(tic::dsl_load()); tic::prepare_all_stages()"
+  - cmd: Rscript -e "options(pkgType = 'binary'); remotes::install_github('ropensci/tic', upgrade = 'always'); print(tic::dsl_load()); tic::prepare_all_stages()"
 
 before_build: Rscript -e "tic::before_install()"
 build_script: Rscript -e "tic::install()"
@@ -22,9 +22,9 @@ before_test: Rscript -e "tic::before_script()"
 test_script: Rscript -e "tic::script()"
 on_success: Rscript -e "try(tic::after_success(), silent = TRUE)"
 on_failure: Rscript -e "tic::after_failure()"
-before_deploy: R -q -e "tic::before_deploy()"
-deploy_script: R -q -e "tic::deploy()"
-after_deploy: R -q -e "tic::after_deploy()"
+before_deploy: Rscript -q -e "tic::before_deploy()"
+deploy_script: Rscript -q -e "tic::deploy()"
+after_deploy: Rscript -q -e "tic::after_deploy()"
 on_finish: Rscript -e "tic::after_script()"
 
 # no testing on R-devel because no package binaries are available
@@ -37,7 +37,6 @@ environment:
   id_rsa:
     secure: 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
   USE_RTOOLS: true
-
 
 matrix:
   fast_finish: true
