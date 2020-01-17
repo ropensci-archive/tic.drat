@@ -1,16 +1,31 @@
 Package: tic.drat
 Title: Example Package for 'tic'
 Version: 0.0-0
-Authors@R: person("Kirill", "Müller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org")
-Description: Building a package and uploading it to a drat repository.
+Date: 2017-06-17
+Authors@R: 
+    c(person(given = "Kirill",
+             family = "Müller",
+             role = c("aut", "cre"),
+             email = "krlmlr+r@mailbox.org",
+             comment = c(ORCID = "0000-0002-1416-3412")),
+      person(given = "Patrick",
+             family = "Schratz",
+             role = "aut",
+             email = "patrick.schratz@gmail.com",
+             comment = c(ORCID = "0000-0003-0748-6624")))
+Description: Building a package and uploading it to a drat
+    repository.
 License: GPL-3
+URL: https://github.com/ropenscilabs/tic.drat,
+    http://ropenscilabs.github.io/tic.drat
+BugReports: https://github.com/ropenscilabs/tic.drat/issues
+Imports: 
+    Rcpp
+Suggests: 
+    testthat
+LinkingTo: 
+    Rcpp
 Encoding: UTF-8
 LazyData: true
-Date: 2017-06-17
-BugReports: https://github.com/krlmlr/tic.drat/issues
-URL: https://github.com/krlmlr/tic.drat, http://krlmlr.github.io/tic.drat
 Roxygen: list(markdown = TRUE)
-Suggests: testthat
-RoxygenNote: 6.0.1
-LinkingTo: Rcpp
-Imports: Rcpp
+RoxygenNote: 7.0.2

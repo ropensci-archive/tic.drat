@@ -6,7 +6,8 @@
 \alias{tic.drat-package}
 \title{tic.drat: Example Package for 'tic'}
 \description{
-Building a package and uploading it to a drat repository.
+Building a package and uploading it to a drat
+    repository.
 }
 \details{
 For demonstration of the \pkg{tic} package.
@@ -18,13 +19,18 @@ Sys.time()
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/krlmlr/tic.drat}
-  \item \url{http://krlmlr.github.io/tic.drat}
-  \item Report bugs at \url{https://github.com/krlmlr/tic.drat/issues}
+  \item \url{https://github.com/ropenscilabs/tic.drat}
+  \item \url{http://ropenscilabs.github.io/tic.drat}
+  \item Report bugs at \url{https://github.com/ropenscilabs/tic.drat/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Kirill Müller \email{krlmlr+r@mailbox.org}
+\strong{Maintainer}: Kirill Müller \email{krlmlr+r@mailbox.org} (\href{https://orcid.org/0000-0002-1416-3412}{ORCID})
+
+Authors:
+\itemize{
+  \item Patrick Schratz \email{patrick.schratz@gmail.com} (\href{https://orcid.org/0000-0003-0748-6624}{ORCID})
+}
 
 }
