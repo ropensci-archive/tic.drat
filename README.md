@@ -1,25 +1,29 @@
 # tic.drat
 
 [![Travis build status](https://img.shields.io/travis/ropenscilabs/tic.drat/master?logo=travis&style=flat-square&label=Linux)](https://travis-ci.com/ropenscilabs/tic.drat)
-[![AppVeyor build status](https://img.shields.io/appveyor/ci/ropensci/tic-drat?label=Windows&logo=appveyor&style=flat-square)](https://ci.appveyor.com/project/ropensci/tic-drat)
+[![Build status](https://ci.appveyor.com/api/projects/status/11qom8mm4v7yi85b?svg=true)](https://ci.appveyor.com/project/ropenscilabs/tic-drat)
 [![Coverage Status](https://codecov.io/gh/ropenscilabs/tic.drat/branch/master/graph/badge.svg)](https://codecov.io/github/ropenscilabs/tic.drat?branch=master)
 
-A minimal example for a [_drat_ repository](https://github.com/ropenscilabs/tic.drat.repo) created and uploaded by _tic_, hosting source and binary macOS packages.
-_tic_ is an R package for CI-agnostic workflow definitions for various R projects. 
+A minimal example for a [_drat_ repository](https://github.com/ropenscilabs/tic.drat.repo) created and uploaded by {tic}, hosting source and binary macOS packages.
+{tic} is an R package for CI-agnostic workflow definitions for various R projects. 
 See its [documentation](https://ropenscilabs.github.io/tic/) for more information.
+
+The magic of this example package comes from the macro `tic::do_drat()` which is being called in `tic.R`.
+By default, binaries are only build and pushed for non-dev versions to keep the drat repo size small.
+Consult the [vignettes](https://docs.ropensci.org/tic/) of the {tic} package for more details.
 
 ## Differences to a conventional CI setup
 
-Only a few files need to be added or changed to enable integration with _tic_:
+Only a few files need to be added or changed to enable integration with {tic}:
 
 - [`tic.R`](tic.R): This file describes the CI workflow.
-- [`.travis.yml`](.travis.yml): This file translates between CI stages of Travis CI and _tic_ stages.
-- [`appveyor.yml`](appveyor.yml): This file translates between CI stages of AppVeyor and _tic_ stages.
+- [`.travis.yml`](.travis.yml): This file translates between CI stages of Travis CI and {tic} stages.
+- [`appveyor.yml`](appveyor.yml): This file translates between CI stages of AppVeyor and {tic} stages.
 - [`.Rbuildignore`](.Rbuildignore): The listed files should not be part of the R package building process and must be excluded.
 
 ## Set up an operational fork of this repository
 
-If you want to experiment with _travis_ and _tic_ for a _drat_ project, you can fork it.
+If you want to experiment with _travis_ and {tic} for a _drat_ project, you can fork it.
 
 1. Use `usethis::create_from_github()` to automatically create a fork of this repo.
     If you use RStudio, a new RStudio project will open. 
